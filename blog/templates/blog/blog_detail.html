@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block body %}
+    <div>
+        <h2>{{ object.content }}</h2>
+        <p>{{ object.posted_date|date:"Y/m/d h:m:s"}}</p>
+    </div>
+{% endblock %}

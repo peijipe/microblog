@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block body %}
+    {% for obj in object_list %}
+        <div>
+            {{  obj.content }}<br>
+            {{ obj.posted_date}}
+        </div><br>
+    {% endfor %}
+{% endblock %}
