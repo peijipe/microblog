@@ -6,6 +6,7 @@ from django.contrib import messages
 
 class BlogListView(ListView):
     model = Blog
+    paginate_by = 3
     context_object_name = "blogs"
 
 class BlogDetailView(DetailView):
