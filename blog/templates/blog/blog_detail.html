@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block body %}
-    <div>
-        <h2>{{ object.content }}</h2>
-        <p>{{ object.posted_date|date:"Y/m/d h:m:s"}}</p>
+    <div class="post-preview">
+        <h2>{{ blog.content }}</h2>
+        <p>{{ blog.posted_date|date:"Y/m/d h:m:s"}}</p>
     </div>
+    <a href="{% url 'update' object.id %}" class="btn btn-primary">編集</a>
+    <a href="{% url 'delete' object.id %}" class="btn btn-danger">削除</a>
 {% endblock %}

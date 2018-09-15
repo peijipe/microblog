@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block body %}
-    {% for obj in object_list %}
-        <div>
-            {{  obj.content }}<br>
-            {{ obj.posted_date}}
-        </div><br>
+    {% for blog in blogs %}
+        <div class="post-preview">
+            <a href="{% url 'detail' blog.id %}">
+                <h2 class="post-title">{{  blog.content }}</h2>
+            </a>
+            <p class="post-meta">{{ blog.posted_date}}</p>
+        </div>
     {% endfor %}
 {% endblock %}
