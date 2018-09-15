@@ -12,4 +12,3 @@ class BlogTestCase(TestCase):
     def test_fail_acccess(self):
         res = self.c.get('/unkwoun')
         self.assertEqual(404, res.status_code)
-    
